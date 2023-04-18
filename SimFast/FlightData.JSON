@@ -1,0 +1,75 @@
+[
+    {
+    "Arrivals":"Arrivals (Can remove later, is just for reference)"
+    },
+    {
+        "Callsign":"ABC123",
+        "Type":"A320",
+        "Fix Pair":"PHL.MIA",
+        "SP1":"EWR",
+        "SP2":"",
+        "POS":"1V",
+        "HO":"",
+        "A/D":"A",
+        "Time":"",
+        "IFR":"",
+        "ETG Instruction":"",
+        "Time(Sec)":"000"
+    },
+    {
+        "Callsign":"ABC123",
+        "Type":"A320",
+        "Fix Pair":"ATL.PHL",
+        "SP1":"PHL",
+        "SP2":"",
+        "POS":"1V",
+        "HO":"",
+        "A/D":"A",
+        "Time":"",
+        "IFR":"",
+        "ETG Instruction":"",
+        "Time (Sec)":"000"
+    },
+    {
+        "Callsign":"ABC123",
+        "Type":"B350",
+        "Fix Pair":"PHL.EWR",
+        "SP1":"",
+        "SP2":"",
+        "POS":"1V",
+        "HO":"",
+        "A/D":"A",
+        "Time":"",
+        "IFR":"",
+        "ETG Instruction":"",
+        "Time (Sec)":"000"
+    },
+    {
+        "Callsign":"ABC123",
+        "Type":"PC12",
+        "Fix Pair":"PNE.PHL",
+        "SP1":"",
+        "SP2":"",
+        "POS":"1V",
+        "HO":"",
+        "A/D":"A",
+        "Time":"",
+        "IFR":"",
+        "ETG Instruction":"",
+        "Time (Sec)":"000"
+    },
+    {
+        "Callsign":"ABC123",
+        "Type":"B737",
+        "Fix Pair":"PHL.SFO",
+        "SP1":"",
+        "SP2":"",
+        "POS":"1V",
+        "HO":"",
+        "A/D":"A",
+        "Time":"",
+        "IFR":"",
+        "ETG Instruction":"",
+        "Time (Sec)":"000"
+    }
+    ]
