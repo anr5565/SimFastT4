@@ -13,7 +13,7 @@
         position: relative;
         width: 1440px;
         height: 1024px;
-        background: rgba(209, 212, 218, 0.92);
+        background: rgba(12, 12, 12, 0.315);
         box-shadow: 0px 4px 4px rgba(248, 237, 237, 0.25);
       }
 
@@ -40,9 +40,9 @@ background: url(scope-image.png);
 .flightstrip{
 position: absolute;
 width: 711px;
-height: 191px;
+height: 231px;
 left: 32px;
-top: 805px;
+top: 769px;
 
 background: url(flightstrip-image.png);
 }
@@ -61,7 +61,7 @@ width: 630px;
 height: 373px;
 left: 778px;
 top: 130px;
-
+z-index: 0;
 background: url(database.png);
 }
 
@@ -105,6 +105,172 @@ background: url(keyboard.png);
   cursor: pointer;
 }
 
+#reset {
+  position: absolute;
+  top: 22px;
+  right: 305px;;
+  left: 1029px;
+  
+  padding: 18px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+width: 105px;
+height: 50px;
+left: 1219px;
+top: 5px;
+  
+font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 18px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 200px;
+  text-align: center;
+  appearance: none;
+  background-color: #4CAF50;
+}
+
+
+#timer {
+position: absolute;
+width: 229px;
+height: 50px;
+left: 1230px;
+top: 70px;
+z-index: 9999;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 16px;
+
+color: #060000;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+.timerborder{
+position: absolute;
+width: 229px;
+height: 50px;
+left: 1158px;
+top: 70px;
+
+border-radius: 4px;
+  background-color: #f8f8f8;
+  color: #fff;
+}
+
+.flight1{
+position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 180px;
+cursor: pointer;
+background: url(flight1.png);
+
+}
+
+.flight2{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 210px;
+background: url(flight2.png);
+
+}
+
+.flight3{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 240px;
+background: url(flight3.png);
+
+}
+.flight4{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 270px;
+background: url(flight4.png);
+
+}
+.flight5{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 300px;
+background: url(flight5.png);
+
+}
+.flight6{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 330px;
+background: url(flight6.png);
+
+}
+.flight7{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 360px;
+background: url(flight7.png);
+
+}
+.flight8{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 390px;
+background: url(flight8.png);
+
+}
+.flight9{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 420px;
+background: url(flight9.png);
+
+}
+.flight10{
+  position: absolute;
+width: 496px;
+height: 23px;
+left: 850px;
+top: 450px;
+background: url(flight10.png);
+
+}
+
+
+
 
 
 /* This is the HTML's main body*/
@@ -112,16 +278,62 @@ background: url(keyboard.png);
 
     </style>
   </head>
+
   <body>
     <div class="simbackground">
+
         <div class="scope"></div>
         <div class="flightstrip"></div>
         <input type="text" id="my-textfield">
+
+
         <div class="database"></div>
+        <div class="flight1" id="flight1" onclick="FlightData()"> </div>
+        <div class="flight2"></div>
+        <div class="flight3"></div>
+        <div class="flight4"></div>
+        <div class="flight5"></div>
+        <div class="flight6"></div>
+        <div class="flight7"></div>
+        <div class="flight8"></div>
+        <div class="flight9"></div>
+        <div class="flight10"></div>
+
+
         <div class="keyboard"></div>
+
+        <h1 id="timer">00:00:00</h1>
         <button id="start">Start</button>
 	      <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+        <div class="timerborder"></div>      
+       
+
+        <div class="dropdown">
+          <select>
+            <option value="selector" selected disabled hidden>Select Your Speed </option>
+            <option value="times">x1</option>
+            <option value="times">x2</option>
+            <option value="times">x5</option>
+            <option value="times">x10</option>
+
+          
+              
+           
+           
+          </select>
+        </div>
+
   </body>
+
+  <script src="timer.js"></script>
+
+  <script src="dataload.js"></script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"></script>
 
 </html>
 
