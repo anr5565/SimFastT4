@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 
 
-/* CSS Codes */
+<!-- CSS Codes -->
 
 <html>
   <head>
-    <title>My Webpage</title>
+
+    <title>SimFast Team 4</title>
     <style>
 
       .simbackground {
         position: relative;
         width: 1440px;
         height: 1024px;
-        background: rgba(12, 55, 138, 0.92);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: rgba(209, 212, 218, 0.92);
+        box-shadow: 0px 4px 4px rgba(248, 237, 237, 0.25);
       }
 
       .scope {
@@ -76,13 +77,41 @@ background: url(keyboard.png);
 }
 
 
+#start {
+  position: absolute;
+  top: 22px;
+  right: 546px;
+  left: 777.5px;
+  
+  padding: 18px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#stop {
+  position: absolute;
+  top: 22px;
+  right: 432px;
+  left: 902px;
+  
+  padding: 18px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
 /* This is the HTML's main body*/
 
 
     </style>
   </head>
-
-
   <body>
     <div class="simbackground">
         <div class="scope"></div>
@@ -90,6 +119,8 @@ background: url(keyboard.png);
         <input type="text" id="my-textfield">
         <div class="database"></div>
         <div class="keyboard"></div>
+        <button id="start">Start</button>
+	      <button id="stop">Stop</button>
   </body>
 
 </html>

@@ -102,3 +102,25 @@ top: 610px;
 
 background: url(keyboard.png);
 }
+
+.startandstoprec{
+position: absolute;
+width: 230px;
+height: 65px;
+left: 777.5px;
+top: 22px;
+background: #000900;
+}
+
+#start {
+  position: absolute;
+  top: calc(50% - 65px/2 - 457.5px);
+  right: 546px;
+  transform: translate(-50%, -50%);
+  padding: 18px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
