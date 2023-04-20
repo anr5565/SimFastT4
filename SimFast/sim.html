@@ -269,9 +269,71 @@ background: url(flight10.png);
 
 }
 
+#my-data {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: 20px;
+        border: 1px solid #ccc;
 
+        position: absolute;
+        width: 711px;
+        height: 231px;
+        left: 32px;
+        top: 769px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
 
+      .value {
+        display: inline-block;
+        margin-left: 5px;
+      }
+      
+      .type {
+        color: blue;
+      }
+      
+      .time {
+        font-style: italic;
+      }
 
+      table {
+        position: absolute;
+        width: 711px;
+        height: 23px;
+        left: 32px;
+        top: 769px;
+
+      border-collapse: collapse;
+      margin: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #333;
+      background-color: #f2f2f2;
+    }
+    
+   
+    th {
+      background-color: #666;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px;
+      text-align: left;
+    }
+    
+  
+    td {
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+
+    #table2 tbody {
+      position: absolute;
+width: 147px;
+height: 32px;
+    }
 
 /* This is the HTML's main body*/
 
@@ -288,7 +350,7 @@ background: url(flight10.png);
 
 
         <div class="database"></div>
-        <div class="flight1" id="flight1" onclick="FlightData()"> </div>
+        <div class="flight1" id="flight1" onclick="flightData"> </div>
         <div class="flight2"></div>
         <div class="flight3"></div>
         <div class="flight4"></div>
@@ -298,6 +360,45 @@ background: url(flight10.png);
         <div class="flight8"></div>
         <div class="flight9"></div>
         <div class="flight10"></div>
+
+        <div id="flight1"></div>
+
+        <table id="flight-data">
+          <thead>
+           
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+
+        <script>
+          const flightdata = {
+        "TIC":"001",
+        "Callsign":"AAL4401",
+        "Type":"A320",
+        "Fix Pair":"SFO.PHL",
+        "SP1":"PHL",
+        "SP2":"",
+        "POS":"1V",
+        "HO":"",
+        "A/D":"A",
+        "Time":"00:00:00",
+        "ETG Instruction":"A090H195",
+      };
+      
+    const tableBody = document.querySelector('#flight-data tbody');
+    const tableRow = document.createElement('tr');
+
+    for (const property in flightdata) {
+      const tableCell = document.createElement('td');
+      tableCell.textContent = flightdata[property];
+      tableRow.appendChild(tableCell);
+    }
+
+    tableBody.appendChild(tableRow);
+
+        </script>
 
 
         <div class="keyboard"></div>
@@ -330,10 +431,6 @@ background: url(flight10.png);
 
   <script src="dataload.js"></script>
 
-  <script
-  src="https://code.jquery.com/jquery-3.6.4.min.js"
-  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-  crossorigin="anonymous"></script>
 
 </html>
 
