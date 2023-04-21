@@ -5,3 +5,21 @@
     left: 777.5px;
     top: 524px;
   }
+
+  .key {
+    display: inline-block;
+    position: absolute;
+width: 402px;
+height: 35px;
+left: 791px;
+top: 836px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+ 
