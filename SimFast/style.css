@@ -1,0 +1,318 @@
+.flight1{
+    position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 180px;
+    cursor: pointer;
+    z-index: 0;
+    background: url(flightpics/flight1.png);
+    
+    }
+    
+    
+    .flight2{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 210px;
+    background: url(flightpics/flight2.png);
+    
+    }
+    
+    .flight3{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 240px;
+    background: url(flightpics/flight3.png);
+    
+    }
+    .flight4{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 270px;
+    background: url(flightpics/flight4.png);
+    
+    }
+    .flight5{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 300px;
+    background: url(flightpics/flight5.png);
+    }
+    .flight6{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 330px;
+    background: url(flightpics/flight6.png);
+    
+    }
+    .flight7{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 360px;
+    background: url(flightpics/flight7.png);
+    
+    }
+    .flight8{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 390px;
+    background: url(flightpics/flight8.png);
+    
+    }
+    .flight9{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 420px;
+    background: url(flightpics/flight9.png);
+    
+    }
+    .flight10{
+      position: absolute;
+    width: 496px;
+    height: 23px;
+    left: 850px;
+    top: 450px;
+    background: url(flightpics/flight10.png);
+    }
+
+    .simbackground {
+        position: relative;
+        width: 1440px;
+        height: 1024px;
+        background: rgba(12, 12, 12, 0.315);
+        box-shadow: 0px 4px 4px rgba(248, 237, 237, 0.25);
+      }
+
+   
+
+.scope{
+position: absolute;
+width: 700px;
+height: 700px;
+left: 32px;
+top: 22px;
+background: url(scope-image.png);
+}
+
+.flightstrip{
+position: absolute;
+width: 711px;
+height: 231px;
+left: 32px;
+top: 769px;
+
+background: url(flightstrip-image.png);
+}
+  
+#keyboardtextfield {
+        position: absolute;
+        width: 630px;
+        height: 50px;
+        left: 777.5px;
+        top: 524px;
+      }
+
+.database{
+position: absolute;
+width: 630px;
+height: 373px;
+left: 778px;
+top: 130px;
+z-index: 0;
+background: url(database.png);
+}
+
+.keyboard{
+position: absolute;
+width: 630px;
+height: 390px;
+left: 778px;
+top: 610px;
+
+background: url(keyboard.png);
+
+}
+
+
+#start {
+  position: absolute;
+  top: 22px;
+  right: 546px;
+  left: 777.5px;
+  
+  padding: 18px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#stop {
+  position: absolute;
+  top: 22px;
+  right: 432px;
+  left: 902px;
+  
+  padding: 18px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#reset {
+  position: absolute;
+  top: 22px;
+  right: 305px;;
+  left: 1029px;
+  
+  padding: 18px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+width: 105px;
+height: 50px;
+left: 1219px;
+top: 5px;
+  
+font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 18px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 200px;
+  text-align: center;
+  appearance: none;
+  background-color: #4CAF50;
+}
+
+
+#timer {
+position: absolute;
+width: 229px;
+height: 50px;
+left: 1230px;
+top: 70px;
+z-index: 9999;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 16px;
+
+color: #060000;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+.timerborder{
+position: absolute;
+width: 229px;
+height: 50px;
+left: 1158px;
+top: 70px;
+
+border-radius: 4px;
+  background-color: #f8f8f8;
+  color: #fff;
+}
+
+
+
+#my-data {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+
+        position: absolute;
+        width: 711px;
+        height: 231px;
+        left: 32px;
+        top: 769px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      
+
+      .value {
+        display: inline-block;
+        margin-left: 5px;
+      }
+      
+      .type {
+        color: blue;
+      }
+      
+      .time {
+        font-style: italic;
+      }
+
+      table {
+        position: absolute;
+        width: 711px;
+        height: 23px;
+        left: 32px;
+        top: 769px;
+
+      border-collapse: collapse;
+      margin: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #333;
+      background-color: #f2f2f2;
+    }
+    
+   
+    th {
+      background-color: #666;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px;
+      text-align: left;
+    }
+    
+  
+    td {
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+
+    #table2 tbody {
+      position: absolute;
+width: 147px;
+height: 32px;
+    }
