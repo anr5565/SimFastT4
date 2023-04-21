@@ -7,20 +7,38 @@
 
     <title>SimFast Team 4</title>
 
-   
-/* This is the HTML's main body*/
+    <style>
+       .simbackground {
+        position: relative;
+        width: 1440px;
+        height: 1024px;
+        background: rgba(12, 12, 12, 0.315);
+        box-shadow: 0px 4px 4px rgba(248, 237, 237, 0.25);
+      }
+
+    </style>
+  
   </head>
+
+  <script src="dataload.js"></script>
+  <link src="style.css" rel="stylesheet" href="style.css">
+  <script src="timer.js"></script>
+  <link src="keyboard.css" rel="stylesheet" href="keyboard.css">
+  <script src="keyboard.js"></script>
+
 
   <body>
     <div class="simbackground">
 
         <div class="scope"></div>
         <div class="flightstrip"></div>
+
         <input type="text" id="keyboardtextfield">
+        <input type="text" id="callsigntext">
 
 
         <div class="database"></div>
-        <div class="flight1" id="flight1" onclick="flightData"> </div>
+        <button class="flight1" id="flight1" onclick="displayflightstrip('')"></button>
         <div class="flight2"></div>
         <div class="flight3"></div>
         <div class="flight4"></div>
@@ -31,45 +49,11 @@
         <div class="flight9"></div>
         <div class="flight10"></div>
 
-        <div id="flight1"></div>
+        
+    
 
-        <table id="flight-data">
-          <thead>
-           
-          </thead>
-          <tbody>
-
-          </tbody>
-        </table>
-
-        <script>
-          const flightdata = {
-        "TIC":"001",
-        "Callsign":"AAL4401",
-        "Type":"A320",
-        "Fix Pair":"SFO.PHL",
-        "SP1":"PHL",
-        "SP2":"",
-        "POS":"1V",
-        "HO":"",
-        "A/D":"A",
-        "Time":"00:00:00",
-        "ETG Instruction":"A090H195",
-      };
-      
-    const tableBody = document.querySelector('#flight-data tbody');
-    const tableRow = document.createElement('tr');
-
-    for (const property in flightdata) {
-      const tableCell = document.createElement('td');
-      tableCell.textContent = flightdata[property];
-      tableRow.appendChild(tableCell);
-    }
-
-    tableBody.appendChild(tableRow);
-
-        </script>
-
+       
+  
 
         <div class="keyboard"></div>
 
@@ -88,6 +72,7 @@
             <option value="times">x5</option>
             <option value="times">x10</option> 
           </select>
+        </div>
 
           
           <button class="a" onclick="addCharacter('A')">A</button>
@@ -105,27 +90,37 @@
           <button class="m" onclick="addCharacter('M')">M</button>
           <button class="n" onclick="addCharacter('N')">N</button>
           <button class="o" onclick="addCharacter('O')">O</button>
-          <button class="key" onclick="addCharacter('P')">P</button>
-          <button class="key" onclick="addCharacter('Q')">Q</button>
-          <button class="key" onclick="addCharacter('R')">R</button>
-          <button class="key" onclick="addCharacter('S')">S</button>
-          <button class="key" onclick="addCharacter('T')">T</button>
-          <button class="key" onclick="addCharacter('U')">U</button>
-          <button class="key" onclick="addCharacter('V')">V</button>
-          <button class="key" onclick="addCharacter('W')">W</button>
-          <button class="key" onclick="addCharacter('X')">X</button>
-          <button class="key" onclick="addCharacter('Y')">Y</button>
-          <button class="key" onclick="addCharacter('Z')">Z</button>
-      
-        </div>
+          <button class="p" onclick="addCharacter('P')">P</button>
+          <button class="q" onclick="addCharacter('Q')">Q</button>
+          <button class="r" onclick="addCharacter('R')">R</button>
+          <button class="s" onclick="addCharacter('S')">S</button>
+          <button class="t" onclick="addCharacter('T')">T</button>
+          <button class="u" onclick="addCharacter('U')">U</button>
+          <button class="v" onclick="addCharacter('V')">V</button>
+          <button class="w" onclick="addCharacter('W')">W</button>
+          <button class="x" onclick="addCharacter('X')">X</button>
+          <button class="y" onclick="addCharacter('Y')">Y</button>
+          <button class="z" onclick="addCharacter('Z')">Z</button>
 
+          <button class="numberzero" onclick="addCharacter('0')">0</button>
+          <button class="numberone" onclick="addCharacter('1')">1</button>
+          <button class="numbertwo" onclick="addCharacter('2')">2</button>
+          <button class="numberthree" onclick="addCharacter('3')">3</button>
+          <button class="numberfour" onclick="addCharacter('4')">4</button>
+          <button class="numberfive" onclick="addCharacter('5')">5</button>
+          <button class="numbersix" onclick="addCharacter('6')">6</button>
+          <button class="numberseven" onclick="addCharacter('7')">7</button>
+          <button class="numbereight" onclick="addCharacter('8')">8</button>
+          <button class="numbernine" onclick="addCharacter('9')">9</button>
+
+          <button class="space" onclick="addCharacter(' ')">Space</button>
+          <button class="enter" onclick="addCharacter('')">Enter</button>
+          <button class="delete" onclick="deleteCharacter('')">Back</button>
+      
+        
   </body>
 
  
-  <script src="dataload.js"></script>
-  <link src="style.css" rel="stylesheet" href="style.css">
-  <script src="timer.js"></script>
-  <script src="keyboard.js"></script>
 
 </html>
 
