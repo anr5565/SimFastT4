@@ -1,0 +1,35 @@
+
+#map {
+    height: 523px;
+    width: 611px;
+    position: absolute;
+    left: 32px;
+    top: 22px;
+    border: 1px solid black;
+    z-index: 0;
+}
+
+.gm-fullscreen-control {
+    display: none !important;
+  }
+  
+
+#box {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+#controls {
+    margin-top: 10px;
+    margin-left: 650px
+}
+  
+#timer {
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 24px;
+}

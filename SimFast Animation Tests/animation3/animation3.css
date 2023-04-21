@@ -1,22 +1,10 @@
-#airport {
-    position: relative;
-    width: 800px;
-    height: 600px;
-  }
-  
-  .flight {
+
+#map {
+    height: 523px;
+    width: 611px;
     position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  #flight1 {
-    top: 100px;
-    left: 100px;
-  }
-  
-  #flight2 {
-    top: 200px;
-    left: 200px;
-  }
-  
+    left: 32px;
+    top: 22px;
+    border: 5px solid black;
+    z-index: 0;
+}

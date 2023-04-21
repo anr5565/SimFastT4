@@ -2,18 +2,52 @@
 <html>
 <head>
 	<title>Flights Animation</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="animation3_.css">
+	<style>
+		#map {
+			height: 523px;
+			width: 611px;
+			position: absolute;
+			left: 32px;
+			top: 22px;
+			border: 5px solid black;
+		}
+		#box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      	}
+      	#buttons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      	}
+	</style>
+
+
+	
 </head>
 <body>
-	<div id="airport">
-		<img src="airport.png" />
-		<div class="flight" id="flight1">
-			<img src="airplane.png" />
-		</div>
-		<div class="flight" id="flight2">
-			<img src="airplane.png" />
-		</div>
-	</div>
-	<script src="script.js"></script>
+	<div id="map"></div>
+	<div id="box"></div>
+    <div id="buttons">
+      <button id="start">start</button>
+      <button id="stop">stop</button>
+    </div>
+
+<!--Scripts-->
+<script>
+	$(document).ready(function() {
+	  alert('jQuery is working!');
+	});
+  </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSFa_5fRglnU3r9cGfYqLi9VFej4Ba4vQ&callback=initMap" 
+async defer></script>
+<script src="animation3_1.js"></script>
 </body>
 </html>

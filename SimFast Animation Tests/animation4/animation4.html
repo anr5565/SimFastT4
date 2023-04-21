@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flights Animation</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="animation4.css">
+	
+	<style>
+		#map {
+		height: 523px;
+		width: 611px;
+		position: absolute;
+		left: 32px;
+		top: 22px;
+		border: 2px solid black;
+		}
+		#box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      	}
+      	#buttons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      	}
+	</style>
+
+
+	
+</head>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSFa_5fRglnU3r9cGfYqLi9VFej4Ba4vQ&callback=initMap" 
+async defer></script>
+<body>
+	<div id="map"></div>
+	<div id="box"></div>
+    <div id="controls">
+      <button id="start-stop">Start</button>
+      <button id="restart">Restart</button>
+      <label for="speed">Speed:</label>
+      <select id="speed">
+        <option value="1">1x</option>
+        <option value="2">2x</option>
+        <option value="4">4x</option>
+      </select>
+      <div id="timer">00:00:00</div>
+    </div>
+
+
+<script src="animation4.js"></script>
+</body>
+</html>
