@@ -82,7 +82,7 @@ function initMap() {
         streetViewControl: false
       });
 
-    var runwayCoords = [
+    var PHLrunwayCoords = [
         { lat: 39.8774, lng: -75.2427 },
         { lat: 39.8775, lng: -75.2453 },
         { lat: 39.8698, lng: -75.2460 },
@@ -90,15 +90,33 @@ function initMap() {
         { lat: 39.8774, lng: -75.2427 }
     ];
 
-    var runway = new google.maps.Polygon({
-        paths: runwayCoords,
-        strokeColor: '#00ff00',
+    var EWRrunwayCoords = [
+      { lat: 40.694535, lng: -74.177189 },
+      { lat: 40.698078, lng: -74.174883 },
+      { lat: 40.697628, lng: -74.174162 },
+      { lat: 40.696928, lng: -74.173334 },
+      { lat: 40.695875, lng: -74.172462 }
+    ];
+
+    var PHLrunway = new google.maps.Polygon({
+        paths: PHLrunwayCoords,
+        strokeColor: '#0000ff',
         strokeOpacity: 1.0,
         strokeWeight: 5,
-        fillColor: '#00ff00',
+        fillColor: '#0000ff',
         fillOpacity: 1.0
       });
-      runway.setMap(map);
+      PHLrunway.setMap(map);
+
+    var EWRrunway = new google.maps.Polygon({
+        paths: EWRrunwayCoords,
+        strokeColor: '#0000ff',
+        strokeOpacity: 1.0,
+        strokeWeight: 5,
+        fillColor: '#0000ff',
+        fillOpacity: 1.0
+      });
+      EWRrunway.setMap(map);
 
 var styledMapType = new google.maps.StyledMapType(style, {
     name: 'Styled Map'
@@ -118,36 +136,4 @@ animation.box = new google.maps.Rectangle({
       new google.maps.LatLng(center.lat + 0.01, center.lng + 0.01)
     )
 });
-
-fetch('FlightData.json')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(flight => {
-      var marker = new google.maps.Marker({
-        position: {lat: flight.latitude, lng: flight.longitude},
-        map: map,
-        icon: 'airplane.png',
-        rotation: flight.heading,
-        title: flight.flightNumber
-      });
-   
-
-  // add an info window to each marker that displays the flight number
-var infowindow = new google.maps.InfoWindow({
-    content: flight.flightNumber
-  });
-marker.addListener('click', function() {
-    infowindow.open(map, marker);
-  });
-  
-  // add an event listener to each marker that displays a tooltip on mouseover
-marker.addListener('mouseover', function() {
-    var tooltip = new google.maps.InfoWindow({
-      content: flight.flightNumber
-    });
-    tooltip.open(map, marker);
-
-     });
-  });
-  });
 }  
