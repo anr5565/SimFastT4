@@ -1,0 +1,399 @@
+
+.keyboard{
+    position: absolute;
+    width: 630px;
+    height: 390px;
+    left: 778px;
+    top: 613px;
+    
+    background: url(keyboard.png);
+    
+    }
+
+
+    .a {
+        position: absolute;
+width: 35px;
+height: 35px;
+left: 791px;
+top: 836px;
+
+        background: rgba(127, 213, 213, 0.6);
+      }
+      
+    
+  .b {
+    position: absolute;
+width: 35px;
+height: 35px;
+    left: 849px;
+    top: 836px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  .c {
+    position: absolute;
+width: 35px;
+height: 35px;
+    left: 908px;
+    top: 836px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  .d {
+    position: absolute;
+width: 35px;
+height: 35px;
+    left: 966px;
+    top: 836px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  .e {
+    position: absolute;
+width: 35px;
+height: 35px;
+    left: 1028px;
+    top: 836px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  .f {
+    position: absolute;
+width: 35px;
+height: 35px;
+    left: 1093px;
+    top: 836px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  .g {
+    position: absolute;
+width: 35px;
+height: 35px;
+    left: 1158px;
+    top: 836px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* v */
+.v {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 791px;
+    top: 965px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* z */
+  .z {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1028px;
+    top: 965px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* y */
+  .y {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 966px;
+    top: 965px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* x */
+  .x {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 908px;
+    top: 965px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* w */
+  .w {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 849px;
+    top: 965px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* o */
+  .o {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 791px;
+    top: 922px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* u */
+  .u {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1158px;
+    top: 922px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* t */
+  .t {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1093px;
+    top: 922px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* s */
+  .s {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1028px;
+    top: 922px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* r */
+  .r {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 966px;
+    top: 922px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* q */
+  .q {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 908px;
+    top: 922px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* p */
+  .p {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 849px;
+    top: 922px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* n */
+  .n {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1158px;
+    top: 879px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* m */
+.m {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1093px;
+    top: 879px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* l */
+  .l {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1028px;
+    top: 879px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* k */
+  .k {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 966px;
+    top: 879px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* j */
+  .j {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 908px;
+    top: 879px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* i */
+  .i {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 849px;
+    top: 879px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+  
+  /* h */
+  .h {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 791px;
+    top: 879px;
+    background: rgba(127, 213, 213, 0.6);
+  }
+
+
+  .numberzero {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1288px;
+    top: 965px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numberone {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1223px;
+    top: 836px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numbertwo {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1288px;
+    top: 836px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numberthree {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1350px;
+    top: 836px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numberfour {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1223px;
+    top: 879px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numberfive {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1288px;
+    top: 879px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numbersix {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1350px;
+    top: 879px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numberseven {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1223px;
+    top: 922px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numbereight {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1288px;
+    top: 922px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+  .numbernine {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1350px;
+    top: 922px;
+    background: rgba(122, 133, 233, 0.6);
+  }
+
+
+  .space {
+    position: absolute;
+width: 207px;
+height: 35px;
+left: 1028px;
+top: 705px;
+
+background: #E5E943;
+  }
+
+  .enter{
+    position: absolute;
+width: 127px;
+height: 35px;
+left: 1258px;
+top: 705px;
+
+background: #FF0000;
+  }
+  
+ .delete{
+    position: absolute;
+width: 93px;
+height: 35px;
+left: 908px;
+top: 705px;
+
+background: #E5E943;
+ }
+  
+ .callsigntext {
+
+    position: absolute;
+width: 147px;
+height: 32px;
+left: 58px;
+top: 800px;
+
+ }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flights Animation</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="ani5.css">
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSFa_5fRglnU3r9cGfYqLi9VFej4Ba4vQ&callback=initMap&libraries=geometry" 
+    async defer></script>
+	<style>
+		#map {
+		height: 523px;
+		width: 611px;
+		position: absolute;
+		left: 32px;
+		top: 22px;
+		border: 2px solid black;
+		}
+		
+      	#buttons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      	}
+	</style>
+
+
+	
+</head>
+<body>
+	<div id="map"></div>
+	<div id="box"></div>
+    <div id="controls">
+      <div style="position: absolute; top: 5px; left: 650px; ">
+        <span style="border: 1px solid black; padding: 1px 4px 1px 4px;" id="timer"><label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label></span>
+        <select id="rate" onchange="changeRate()">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="4">4x</option>
+            <option value="10">10x</option>
+        </select>
+    
+        <button onclick="startSimulation()">Start </button>
+        <button onclick="resetSimulation()">Stop </button> <!--- Reloads web page-->
+    </div>		
+
+
+<script src="ani5.js"></script>
+</body>
+</html>

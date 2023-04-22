@@ -11,6 +11,24 @@ const startX = Math.floor(Math.random() * box.clientWidth);
 const startY = Math.floor(Math.random() * box.clientHeight);
 box.style.left = `${startX}px`;
 box.style.top = `${startY}px`;
+var flights = [
+  { x: 100, y: 200 },
+  { x: 300, y: 400 },
+  { x: 500, y: 100 }
+];
+
+function drawFlights() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(map, 0, 0);
+  ctx.fillStyle = "red";
+			for (var i = 0; i < flights.length; i++) {
+				ctx.beginPath();
+				ctx.arc(flights[i].x, flights[i].y, 5, 0, 2 * Math.PI);
+				ctx.fill();
+      }
+    
+}
+setInterval(drawFlights, 100);
 
 //function for the google map to work
 function initMap() {
@@ -135,46 +153,61 @@ map.mapTypes.set('styled_map', styledMapType);
 
 }
 
+let startTime; // variable to hold the start time
+let elapsedTime = 0; // variable to hold the elapsed time
+let timerInterval; // variable to hold the setInterval ID
+const timerElem = document.getElementById("timer"); // element to display the timer
+
 //other func
 function moveBox(timestamp) {
-  if (!lastTime) {
-    lastTime = timestamp;
+  if (!startTime) {
+    startTime = timestamp;
   }
-  const elapsed = timestamp - lastTime;
-  if (elapsed >= 1000 / speed) {
-    lastTime = timestamp;
-    const angle = timestamp / 1000;
-    const amplitudeX = 100;
-    const amplitudeY = 50;
-    const offsetX = Math.floor(Math.sin(angle) * amplitudeX);
-    const offsetY = Math.floor(Math.cos(angle) * amplitudeY);
-    const left = centerX + offsetX - (box.clientWidth / 2);
-    const top = centerY + offsetY - (box.clientHeight / 2);
-    box.style.left = `${left}px`;
-    box.style.top = `${top}px`;
-  }
-  timerId = requestAnimationFrame(moveBox);
+  elapsedTime = timestamp - startTime;
+
+  const hours = Math.floor(elapsedTime / (60 * 60 * 1000)).toString().padStart(2, "0");
+  const minutes = Math.floor((elapsedTime % (60 * 60 * 1000)) / (60 * 1000)).toString().padStart(2, "0");
+  const seconds = Math.floor((elapsedTime % (60 * 1000)) / 1000).toString().padStart(2, "0");
+  
+  // update the timer element
+  timerElem.textContent = `${hours}:${minutes}:${seconds}`;
+
+  const angle = timestamp / 1000;
+  const amplitudeX = 100;
+  const amplitudeY = 50;
+  const offsetX = Math.floor(Math.sin(angle) * amplitudeX);
+  const offsetY = Math.floor(Math.cos(angle) * amplitudeY);
+  const left = centerX + offsetX - (box.clientWidth / 2);
+  const top = centerY + offsetY - (box.clientHeight / 2);
+  box.style.left = `${left}px`;
+  box.style.top = `${top}px`;
 }
 
 
 function startAnimation() {
-  timerId = requestAnimationFrame(moveBox);
+  startTime = null;
+  elapsedTime = 0;
+  timerInterval = setInterval(() => {
+    const timestamp = performance.now() - elapsedTime;
+    moveBox(timestamp);
+  }, 16); // update every 16ms to get close to 60fps
 }
 
 function stopAnimation() {
-  cancelAnimationFrame(timerId);
+  clearInterval(timerInterval);
+  timerElem.textContent = "00:00:00"; // reset the timer element
 }
 
 function resetAnimation() {
   stopAnimation();
   box.style.left = "0px";
   box.style.top = "0px";
-  lastTime = null;
 }
 
 function changeSpeed() {
   speed = parseInt(document.getElementById("speed").value);
   resetAnimation();
+  startAnimation();
 }
 
 const startBtn = document.getElementById("start-stop");
@@ -187,3 +220,9 @@ startBtn.addEventListener("click", function() {
     startBtn.innerHTML = "Stop";
   }
 });
+
+const stopButton = document.getElementById("stopButton");
+stopButton.addEventListener("click", function() {
+    clearInterval(timerId);
+});
+
