@@ -132,6 +132,107 @@ background: url(flightstrip-image.png);
         background: rgba(107, 105, 105, 0.315);
          }
 
+#time {
+  position: absolute;
+width: 147px;
+height: 32px;
+left: 236px;
+top: 800px;
+background: rgba(107, 105, 105, 0.315);
+}
+
+#pos {
+  position: absolute;
+width: 147px;
+height: 32px;
+left: 236px;
+top: 963px;;
+
+background: rgba(107, 105, 105, 0.315);
+
+}
+
+#sp1 {
+position: absolute;
+width: 147px;
+height: 32px;
+left: 565px;
+top: 816px;
+
+background: rgba(107, 105, 105, 0.315);
+}
+
+#type {
+
+  position: absolute;
+width: 147px;
+height: 32px;
+left: 58px;
+top: 876px;
+background: rgba(107, 105, 105, 0.315);
+
+}
+
+#fixpair {
+
+  position: absolute;
+width: 147px;
+height: 32px;
+left: 236px;
+top: 876px;
+background: rgba(107, 105, 105, 0.315);
+}
+
+#ad{
+  position: absolute;
+width: 117px;
+height: 32px;
+left: 405px;
+top: 814px;
+  background: rgba(107, 105, 105, 0.315);
+}
+
+#ticketid{
+
+  position: absolute;
+width: 147px;
+height: 32px;
+left: 58px;
+top: 951px;
+background: rgba(107, 105, 105, 0.315);
+}
+
+#pos{
+
+  position: absolute;
+width: 147px;
+height: 32px;
+left: 236px;
+top: 951px;
+background: rgba(107, 105, 105, 0.315);
+}
+
+#etg {
+  position: absolute;
+  width: 117px;
+  height: 32px;
+  left: 405px;
+  top: 951px;
+  
+  background: rgba(107, 105, 105, 0.315);
+}
+
+#sp2{
+  position: absolute;
+  width: 147px;
+  height: 32px;
+  left: 565px;
+  top: 951px;
+  background: rgba(107, 105, 105, 0.315);
+
+}
+
+
 .database{
 position: absolute;
 width: 630px;
