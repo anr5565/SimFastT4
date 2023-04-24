@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
-
-
 <html>
   <head>
 
-    <title>SimFast Team 4</title>
+    <title>SimFast Team 4 BACKUP2 </title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSFa_5fRglnU3r9cGfYqLi9VFej4Ba4vQ&callback=initMap&libraries=geometry" 
     async defer></script>
+    
 
     <style>
       #map {
@@ -27,14 +25,12 @@
       background: rgba(12, 12, 12, 0.315);
       box-shadow: 0px 4px 4px rgba(248, 237, 237, 0.25);
       }
-
     </style>
   
   </head>
 
   <script src="dataload.js"></script>
   <link src="style.css" rel="stylesheet" href="style.css">
-  <script src="timer.js"></script>
   <link src="keyboard.css" rel="stylesheet" href="keyboard.css">
   <script src="keyboard.js"></script>
   <script src="scope.js"></script> 
@@ -76,8 +72,7 @@
   
 
         <div class="keyboard"></div>
-
-        <h1 id="timer">00:00:00</h1>
+        <h1 id="stopwatch">00:00:00</h1>
         <button id="start">Start</button>
 	      <button id="stop">Stop</button>
         <button id="reset">Reset</button>
@@ -95,53 +90,52 @@
         </div>
 
           
-          <button class="a" onclick="addCharacter('A')">A</button>
-          <button class="b" onclick="addCharacter('B')">B</button>
-          <button class="c" onclick="addCharacter('C')">C</button>
-          <button class="d" onclick="addCharacter('D')">D</button>
-          <button class="e" onclick="addCharacter('E')">E</button>
-          <button class="f" onclick="addCharacter('F')">F</button>
-          <button class="g" onclick="addCharacter('G')">G</button>
-          <button class="h" onclick="addCharacter('H')">H</button>
-          <button class="i" onclick="addCharacter('I')">I</button>
-          <button class="j" onclick="addCharacter('J')">J</button>
-          <button class="k" onclick="addCharacter('K')">K</button>
-          <button class="l" onclick="addCharacter('L')">L</button>
-          <button class="m" onclick="addCharacter('M')">M</button>
-          <button class="n" onclick="addCharacter('N')">N</button>
-          <button class="o" onclick="addCharacter('O')">O</button>
-          <button class="p" onclick="addCharacter('P')">P</button>
-          <button class="q" onclick="addCharacter('Q')">Q</button>
-          <button class="r" onclick="addCharacter('R')">R</button>
-          <button class="s" onclick="addCharacter('S')">S</button>
-          <button class="t" onclick="addCharacter('T')">T</button>
-          <button class="u" onclick="addCharacter('U')">U</button>
-          <button class="v" onclick="addCharacter('V')">V</button>
-          <button class="w" onclick="addCharacter('W')">W</button>
-          <button class="x" onclick="addCharacter('X')">X</button>
-          <button class="y" onclick="addCharacter('Y')">Y</button>
-          <button class="z" onclick="addCharacter('Z')">Z</button>
+        <input type="text" id="keyboardtextfield" value="">
+          
+        <button class="a" onclick="addCharacter('A')">A</button>
+        <button class="b" onclick="addCharacter('B')">B</button>
+        <button class="c" onclick="addCharacter('C')">C</button>
+        <button class="d" onclick="addCharacter('D')">D</button>
+        <button class="e" onclick="addCharacter('E')">E</button>
+        <button class="f" onclick="addCharacter('F')">F</button>
+        <button class="g" onclick="addCharacter('G')">G</button>
+        <button class="h" onclick="addCharacter('H')">H</button>
+        <button class="i" onclick="addCharacter('I')">I</button>
+        <button class="j" onclick="addCharacter('J')">J</button>
+        <button class="k" onclick="addCharacter('K')">K</button>
+        <button class="l" onclick="addCharacter('L')">L</button>
+        <button class="m" onclick="addCharacter('M')">M</button>
+        <button class="n" onclick="addCharacter('N')">N</button>
+        <button class="o" onclick="addCharacter('O')">O</button>
+        <button class="p" onclick="addCharacter('P')">P</button>
+        <button class="q" onclick="addCharacter('Q')">Q</button>
+        <button class="r" onclick="addCharacter('R')">R</button>
+        <button class="s" onclick="addCharacter('S')">S</button>
+        <button class="t" onclick="addCharacter('T')">T</button>
+        <button class="u" onclick="addCharacter('U')">U</button>
+        <button class="v" onclick="addCharacter('V')">V</button>
+        <button class="w" onclick="addCharacter('W')">W</button>
+        <button class="x" onclick="addCharacter('X')">X</button>
+        <button class="y" onclick="addCharacter('Y')">Y</button>
+        <button class="z" onclick="addCharacter('Z')">Z</button>
 
-          <button class="numberzero" onclick="addCharacter('0')">0</button>
-          <button class="numberone" onclick="addCharacter('1')">1</button>
-          <button class="numbertwo" onclick="addCharacter('2')">2</button>
-          <button class="numberthree" onclick="addCharacter('3')">3</button>
-          <button class="numberfour" onclick="addCharacter('4')">4</button>
-          <button class="numberfive" onclick="addCharacter('5')">5</button>
-          <button class="numbersix" onclick="addCharacter('6')">6</button>
-          <button class="numberseven" onclick="addCharacter('7')">7</button>
-          <button class="numbereight" onclick="addCharacter('8')">8</button>
-          <button class="numbernine" onclick="addCharacter('9')">9</button>
+        <button class="numberzero" onclick="addCharacter('0')">0</button>
+        <button class="numberone" onclick="addCharacter('1')">1</button>
+        <button class="numbertwo" onclick="addCharacter('2')">2</button>
+        <button class="numberthree" onclick="addCharacter('3')">3</button>
+        <button class="numberfour" onclick="addCharacter('4')">4</button>
+        <button class="numberfive" onclick="addCharacter('5')">5</button>
+        <button class="numbersix" onclick="addCharacter('6')">6</button>
+        <button class="numberseven" onclick="addCharacter('7')">7</button>
+        <button class="numbereight" onclick="addCharacter('8')">8</button>
+        <button class="numbernine" onclick="addCharacter('9')">9</button>
 
-          <button class="space" onclick="addCharacter(' ')">Space</button>
-          <button class="enter" onclick="addCharacter('')">Enter</button>
-          <button class="delete" onclick="deleteCharacter('')">Back</button>
+        <button class="space" onclick="addCharacter(' ')">Space</button>
+        <button class="enter" onclick="addCharacter('')">Enter</button>
+        <button class="delete" onclick="deleteCharacter('')">Back</button>
       
         
   </body>
-
- 
-
 </html>
 
 

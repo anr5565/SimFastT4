@@ -312,12 +312,12 @@ font-size: 16px;
 }
 
 
-#timer {
+#stopwatch {
 position: absolute;
 width: 229px;
 height: 50px;
 left: 1230px;
-top: 70px;
+top: 85px;
 z-index: 9999;
 font-family: 'Inter';
 font-style: normal;

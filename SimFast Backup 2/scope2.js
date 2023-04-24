@@ -277,81 +277,11 @@ function initMap() {
       });
       LASrunway.setMap(map);
 
-
 var styledMapType = new google.maps.StyledMapType(style, {
     name: 'Styled Map'
 });
 map.mapTypes.set('styled_map', styledMapType);
 map.setMapTypeId('styled_map'); 
-
-
-function animateFlight() {
-  // create the purple box to represent the flight
-  var flightBox = new google.maps.Rectangle({
-    strokeColor: '#FF00FF',
-    strokeOpacity: 0.8,
-    strokeWeight: 6,
-    fillColor: '#FF00FF',
-    fillOpacity: 0.35,
-    map: map,
-    bounds: new google.maps.LatLngBounds(
-      new google.maps.LatLng(37.6213129, -122.3789554), // replace with new coordinates
-      new google.maps.LatLng(39.8729, -75.2437)  // replace with new coordinates
-    )
-  });
-
-  var flightInfoDiv = document.createElement('div');
-  // set the flight's starting point and ending point
-  var startLatLng = new google.maps.LatLng(39.8729, -75.2437);
-  var endLatLng = new google.maps.LatLng(40.6895, -74.1745);
-
-
-  // calculate the distance between the starting point and ending point
-  var distance = google.maps.geometry.spherical.computeDistanceBetween(startLatLng, endLatLng);
-  var duration = 10000;
-  var speed = distance / (duration*10);
-  var startTime = new Date().getTime(); //start time animation
-
-
-  // define the animation loop
-  function animateBox() {
-    var time = new Date().getTime() - startTime;
-    var distanceTravelled = speed * time;
-    if (distanceTravelled >= distance) {
-      // the animation is complete, so remove the flight box
-      flightBox.setMap(null);
-      flightInfoDiv.remove()
-      return;
-    }
-
-    // calculate the position of the flight box based on the distance travelled
-    var position = google.maps.geometry.spherical.computeOffset(startLatLng, distanceTravelled, google.maps.geometry.spherical.computeHeading(startLatLng, endLatLng));
-    flightBox.setBounds(new google.maps.LatLngBounds(
-      new google.maps.LatLng(position.lat() - 0.001, position.lng() - 0.001),
-      new google.maps.LatLng(position.lat() + 0.001, position.lng() + 0.001)
-    ));
-    requestAnimationFrame(animateBox);
-  }
-  animateBox();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //buttons
